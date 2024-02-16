@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>地点分布散点图</title>
+    <title>战团地点查找</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pinyin-match@1.2.5/dist/main.min.js"></script>
 </head>
 
 <body>
-    <h1>地点分布散点图</h1>
+    <h1>大地图相对位置</h1>
     <label for="start-location">起点：</label>
     <input type="text" id="start-location" placeholder="输入起点">
 
@@ -20,12 +20,13 @@
         <option value="Native">Native版本地图</option>
         <option value="Sanguo">三国版本地图</option>
     </select>
+    <div>搜索框支持拼音首字母、中文；整体或部分匹配。</div>
     <div id="scatter-plot"></div>
 
     <script>
         function updateMap() {
             selectedMap = document.getElementById('mapSelector').value;
-            var filePath = selectedMap + '_data_and_layout.json';
+            var filePath = './data/jsons/' + selectedMap + '_data_and_layout.json';
             console.log(filePath)
             fetch(filePath)
                 .then(response => response.json())
