@@ -78,7 +78,8 @@
         "symbol": "square",
         "size": 15
       },
-      "textposition": "bottomcenter"
+      "textposition": "bottomcenter",
+      "opacity": 0.5
     },
     {
       "x": [
@@ -236,7 +237,8 @@
         "symbol": "castle",
         "size": 7
       },
-      "textposition": "bottomcenter"
+      "textposition": "bottomcenter",
+      "opacity": 0.5
     },
     {
       "x": [
@@ -580,7 +582,8 @@
         "symbol": "circle",
         "size": 3
       },
-      "textposition": "bottomcenter"
+      "textposition": "bottomcenter",
+      "opacity": 0.5
     }
   ],
   "layout": {
@@ -592,11 +595,6 @@
       "title": "Y轴标签"
     },
     "showlegend": false,
-    "margin": {
-      "l": 20,
-      "r": 10,
-      "b": 40,
-      "t": 10
-    }
+    "autosize": true
   }
 }
